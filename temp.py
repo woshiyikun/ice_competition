@@ -1,0 +1,10 @@
+new_columns_name = ['e_p2_m_t', 'e_i_t', 'p_avr_10min', 'air_density_20', 'p1_a_10med',
+       'yaw_ch1', 'p1_a_10max', 'y_p_10avr', 'w_avr_10avr', 'p2_mt_10min',
+       'e_p2_m_t_avr', 'y_p_10max', 'int_tmp_10min', 'p2_mt_10avr',
+       'i_p2_m_t_avr', 'y_p_10min', 'p_avr_10max', 'y_p_10med', 'w_avr_10max',
+       'e_tmp_10avr', 'i_p2_m_t', 'p1_a_10avr', 'w_avr_10min', 'yaw_position',
+       'int_tmp_10avr', 'p2_mt_10max', 'p2_mt_10med', 'e_tmp_10min',
+       'p1_a_10min', 'pitch1_angle', 'p_avr_10avr', 'pitch2_moto_tmp',
+       'e_tmp_10max', 'w_avr_10med', 'environment_tmp', 'int_tmp_10med',
+       'e_p2_ng_t', 'g_s_avr_10max', 'wind_speed_2', 'e_tmp_10med','group_label',
+	   'group']

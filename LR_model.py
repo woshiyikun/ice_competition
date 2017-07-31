@@ -1,16 +1,9 @@
-
-
-#LR模型：线下预测85分
-#线上86.85分
-
-
 from sklearn.linear_model import LogisticRegression
 from sklearn.externals import joblib
 import numpy as np
 import pandas as pd
 import time
 def main():	
-	#读取数据
 	train_data = pd.read_csv('D:\\iot\\competition\\data\\new_feature\\final_15.csv')
 	test_data = pd.read_csv('D:\\iot\\competition\\data\\new_feature\\final_21.csv')
 	#train_data = pd.read_csv('D:\\iot\\competition\\data\\new_feature\\final_21.csv')
@@ -28,7 +21,6 @@ def main():
 	test_data.drop('group_label',axis=1, inplace=True)
 
 	
-	#训练并保存模型
 	t1 = time.time()   
 	clff = model(train_data,y_train_label)
 	s,n,TP = cal_score(clff,test_data,y_test_label,0.75)

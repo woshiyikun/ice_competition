@@ -42,14 +42,11 @@ def main():
 	#把test_data_del写成文件
 	test_data_del.to_csv('test_data_del_08.csv',index = False)
 	
-	#根据group信息，把同一个gourp都变成同样的label
+	#根据group信息，把同一个gourp都变成同样的label(添加每个group的前十个样本)
 	final_label = cal_final_label(pre_label,y_test_group_del)
 	
 	#输出成最后的格式
 	output(final_label)
-	
-	
-	
 	
 	
 def output(final_label):
@@ -63,10 +60,7 @@ def output(final_label):
 	final_pre_result = pd.DataFrame(start_time,columns = ['startTime'])
 	final_pre_result['endTime'] = end_time
 	final_pre_result.to_csv('test_08_results.csv',index = False)
-	
-	
-	
-	
+		
 	
 def cal_final_label():
 	final_label = []
@@ -90,12 +84,7 @@ def cal_final_label():
 
 	return final_label
 
-	
-	
-	
-	
-	
-	
+		
 	
 #按照每一个group计算统计值
 #每个group标注前十个样本为1
@@ -116,7 +105,6 @@ def find_group():
 	test_data = pd.concat([test_data,group_label_d],axis=1)
 	return test_data
 #记得添加到test_data里面
-
 
 
 #计算所有列的统计值
@@ -260,9 +248,6 @@ def cal_statist(test_data):
 	return test_data
 
 
-					  
-					  
-					  
 #计算不同列之间的差值	
 def cal_diff(test_data):
     #环境温度减
@@ -276,7 +261,7 @@ def cal_diff(test_data):
     test_data['i_p1_ng_t'] = test_data['int_tmp'] - test_data['pitch1_ng5_tmp']
     test_data['i_p2_ng_t'] = test_data['int_tmp'] - test_data['pitch2_ng5_tmp']
     test_data['i_p3_ng_t'] = test_data['int_tmp'] - test_data['pitch3_ng5_tmp']
-    test_data['i_p2_m_t'] = test_data['int_tmp'] - test_data['pitch2_moto_tmp']
+   test_data['i_p2_m_t'] = test_data['int_tmp'] - test_data['pitch2_moto_tmp']
 	
 	#机舱温度和环境温度的差
 	test_data['e_i_t'] = test_data['environment_tmp'] - test_data['int_tmp']
